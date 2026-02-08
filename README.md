@@ -3,6 +3,7 @@
 M2F (Math-to-Formal) is a framework for translating textbook- and paper-level mathematics into Lean projects that pass machine verification at scale.
 
 ![M2F Overview](figs/M2F_overview.png)
+*Figure 1. High-level overview of M2F and its staged formalization process.*
 
 ## Abstract
 
@@ -45,22 +46,35 @@ The framework separates the workflow into two stages. Stage 1 compiles informal 
 ### End-to-End System Figure
 
 ![M2F End-to-End Figure](./M2F.png)
+*Figure 2. End-to-end architecture for document-level formalization with M2F.*
 
 ### System Pipeline
 
 ![M2F Pipeline](figs/M2F_pipeline.png)
+*Figure 3. Pipeline view of Stage 1 statement compilation and Stage 2 proof repair.*
 
-### Main Performance Charts
+### FATE-H Across Provers (PSR)
 
-| FATE-H across provers (PSR) | FATE-H per-problem length and outcome |
+![FATE-H PSR](figs/fateh_psr_bar_v4.png)
+*Figure 4. Pass Success Rate (PSR) comparison across provers on FATE-H.*
+
+**Table 1. M2F summary results on FATE-H and matched-statement settings.**
+
+| Condition | PSR |
 |---|---|
-| ![FATE-H PSR](figs/fateh_psr_bar_v4.png) | ![FATE-H Length](figs/fateh_loc_bar_log_2col_en.png) |
+| Fully automatic | **96%** |
+| +31 declaration lemma map | **97%** |
+| Stage 2 (matched statements) | **100%** |
 
-### Additional Analyses
+### FATE-H Length and Outcomes
 
-| Alignment analysis | Proof-flow example |
-|---|---|
-| ![Convex Alignment](figs/convex_alignment_updated.png) | ![Proof Flowchart](figs/flowchart_theorem1_1.png) |
+![FATE-H Length](figs/fateh_loc_bar_log_2col_en.png)
+*Figure 5. Per-problem proof length and verification outcomes on FATE-H.*
+
+### Alignment Analysis
+
+![Convex Alignment](figs/convex_alignment_updated.png)
+*Figure 6. Alignment behavior analysis under the convex setting.*
 
 ## Key Takeaways
 
