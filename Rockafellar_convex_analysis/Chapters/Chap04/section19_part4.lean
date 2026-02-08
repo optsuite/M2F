@@ -1670,22 +1670,22 @@ lemma helperForText_19_0_9_guardedSplitConstraintSet_polyhedral
     simpa [hk0] using hinter
   · simpa [hk0, Set.inter_univ] using hsplit
 
-/-- Helper for Text 19.0.9: a max-affine-plus-indicator representation has transformed
-epigraph image equal to split constraints with the `k = 0` last-coordinate guard. -/
+/-- Helper for Text 19.0.9: packed normals with last coordinate `-1` decode to
+the split affine expression after unpacking coordinates. -/
 lemma helperForText_19_0_9_dotPacked_point_finCases_normalForm
     {n m : ℕ} {b : Fin m → Fin n → ℝ} (i : Fin m)
     (y : Fin (n + 1) → ℝ) :
-    dotProduct y (Fin.cases (-1 : ℝ) (b i)) =
+    dotProduct y (prodLinearEquiv_append_coord (n := n) (b i, (-1 : ℝ))) =
       dotProduct (b i) ((prodLinearEquiv_append_coord (n := n)).symm y).1 -
         ((prodLinearEquiv_append_coord (n := n)).symm y).2 := by
   simpa using helperForText_19_0_9_dotPacked_point (n := n) (m := m) (b := b) i y
 
-/-- Helper for Text 19.0.9: packed-direction normals written with `Fin.cases` decode
+/-- Helper for Text 19.0.9: packed-direction normals with last coordinate `0` decode
 to the base-coordinate dot product after unpacking. -/
 lemma helperForText_19_0_9_dotPacked_direction_finCases_normalForm
     {n m : ℕ} {b : Fin m → Fin n → ℝ} (i : Fin m)
     (y : Fin (n + 1) → ℝ) :
-    dotProduct y (Fin.cases (0 : ℝ) (b i)) =
+    dotProduct y (prodLinearEquiv_append_coord (n := n) (b i, (0 : ℝ))) =
       dotProduct (b i) ((prodLinearEquiv_append_coord (n := n)).symm y).1 := by
   simpa using helperForText_19_0_9_dotPacked_direction (n := n) (m := m) (b := b) i y
 
