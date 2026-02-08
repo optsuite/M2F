@@ -1,4 +1,6 @@
-# M2F（Lean 工作区根目录）
+# M2F
+
+## Lean 工作区根目录
 
 本目录是本仓库的 **Lean 4 + mathlib 工作区**（orchestrator 默认用 `LEAN_PROJECT_DIR=M2F`）。
 
