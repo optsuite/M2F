@@ -1,0 +1,8 @@
+import Rockafellar_convex_analysis.Chapters.Chap02.section10_part1
+import Rockafellar_convex_analysis.Chapters.Chap02.section10_part2
+import Rockafellar_convex_analysis.Chapters.Chap02.section10_part3
+import Rockafellar_convex_analysis.Chapters.Chap02.section10_part4
+import Rockafellar_convex_analysis.Chapters.Chap02.section10_part5
+import Rockafellar_convex_analysis.Chapters.Chap02.section10_part6
+import Rockafellar_convex_analysis.Chapters.Chap02.section10_part7
+import Rockafellar_convex_analysis.Chapters.Chap02.section10_part8

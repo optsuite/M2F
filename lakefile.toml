@@ -1,0 +1,31 @@
+name = "M2F"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["M2F"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+linter.style.longLine = false
+linter.style.emptyLine = false
+linter.style.cdot = false
+linter.style.maxHeartbeats = false
+linter.unnecessarySimpa = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+
+[[lean_lib]]
+name = "M2F"
+
+[[lean_lib]]
+name = "tao_analysis2_formal"
+
+[[lean_lib]]
+name = "Rockafellar_convex_analysis"
+
+[[lean_lib]]
+name = "Question_bench"
