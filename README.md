@@ -1,13 +1,13 @@
 # M2F: Automated Formalization of Mathematical Literature at Scale
 
-M2F (Math-to-Formal) is a Lean-oriented framework for translating textbook- and paper-level mathematics into verifier-accepted formal projects at scale.
+M2F (Math-to-Formal) is a framework for translating textbook- and paper-level mathematics into Lean projects that pass machine verification at scale.
 
 ![M2F Overview](figs/M2F_overview.png)
 
 ## Abstract
 
-M2F targets a core bottleneck in machine-assisted mathematics: scaling from isolated theorem proving to document-level formalization.  
-The framework decouples formalization into two stages. Stage 1 compiles informal statements into declaration skeletons and repairs structural issues. Stage 2 keeps statement signatures fixed and focuses on closing proof gaps. This separation improves stability, debuggability, and end-to-end verifier pass rates.
+M2F addresses a central bottleneck in machine-assisted mathematics: moving from isolated theorem proving to document-level formalization.  
+The framework separates the workflow into two stages. Stage 1 compiles informal statements into Lean declaration skeletons and repairs structural inconsistencies. Stage 2 freezes statement signatures and focuses on proof completion through verifier-guided repair. This staged design improves stability, interpretability, and end-to-end pass rates.
 
 ## At a Glance
 
@@ -16,31 +16,35 @@ The framework decouples formalization into two stages. Stage 1 compiles informal
 | Long-document corpus scale | **479 pages** |
 | Generated Lean project size | **153,853 LoC** |
 | Benchmark | **FATE-H (100 problems)** |
-| Fully automatic performance | **96% PSR** |
-| With light supervision (+31 declaration lemma map) | **97% PSR** |
+| Fully automatic setting | **96% PSR** |
+| Light supervision (+31 declaration lemma map) | **97% PSR** |
 | Stage 2 on matched statements (long-document setting) | **100% PSR** |
 
 ## Method
 
 ### Stage 1: Statement Compilation
 
-- Generates Lean declaration skeletons from informal mathematical text.
-- Repairs namespace/type/signature consistency issues for project-level validity.
+- Converts informal mathematical statements into Lean declaration skeletons.
+- Repairs namespace, type, and signature consistency to ensure project-level validity.
 - Allows temporary proof holes to maximize structural coverage before proof repair.
 
 ### Stage 2: Proof Repair
 
-- Freezes statement signatures to avoid target drift.
-- Iteratively closes proof holes using verifier feedback.
-- Optimizes pass rates under fixed declarations for reliable end-to-end checking.
+- Freezes statement signatures to prevent target drift.
+- Iteratively closes proof holes with verifier feedback.
+- Optimizes proof success under fixed declarations for reliable end-to-end checking.
 
 ## Experimental Scope
 
-- **Cross-prover benchmark:** FATE-H for direct comparability of pass rates.
+- **Cross-prover benchmark:** FATE-H for direct and reproducible comparison of pass rates.
 - **Long-document setting:** large mathematical sources translated into executable Lean projects.
-- **Metrics:** Pass Success Rate (PSR), verifier-call efficiency, and cost-normalized verification behavior.
+- **Core metrics:** Pass Success Rate (PSR), verifier-call efficiency, and verifier-normalized cost.
 
 ## Result Highlights
+
+### End-to-End System Figure
+
+![M2F End-to-End Figure](./M2F.png)
 
 ### System Pipeline
 
@@ -60,6 +64,6 @@ The framework decouples formalization into two stages. Stage 1 compiles informal
 
 ## Key Takeaways
 
-- A staged compilation-repair design is effective for scaling formalization beyond isolated theorem tasks.
-- M2F reaches strong fully automatic performance while maintaining compatibility with light supervision.
-- Document-level formalization can achieve high verifier pass rates with controlled, reproducible workflows.
+- A staged compilation-repair pipeline scales formalization beyond isolated theorem tasks.
+- M2F achieves strong fully automatic performance and further improves with lightweight supervision.
+- Document-level formalization can reach high verifier pass rates under controlled, reproducible workflows.
