@@ -57,6 +57,7 @@ The framework separates the workflow into two stages. Stage 1 compiles informal 
 
 ![FATE-H PSR](figs/fateh_psr_bar_v4.png)
 *Figure 4. Pass Success Rate (PSR) comparison across provers on FATE-H.*
+[PDF version](figs/fateh_psr_bar_v4.pdf)
 
 **Table 1. M2F summary results on FATE-H and matched-statement settings.**
 
@@ -70,6 +71,7 @@ The framework separates the workflow into two stages. Stage 1 compiles informal 
 
 ![FATE-H Length](figs/fateh_loc_bar_log_2col_en.png)
 *Figure 5. Per-problem proof length and verification outcomes on FATE-H.*
+[PDF version](figs/fateh_loc_bar_log_2col_en.pdf)
 
 ### Alignment Analysis
 
