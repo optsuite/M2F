@@ -2,6 +2,19 @@
 
 M2F (Math-to-Formal) is a framework for translating textbook- and paper-level mathematics into Lean projects that pass machine verification at scale.
 
+## Authors
+
+Zichen Wang$^{1}$, Wanli Ma$^{2}$, Zaiwen Wen$^{2}$
+
+$^{1}$ School of Mathematical Sciences, Peking University  
+$^{2}$ Beijing International Center for Mathematical Research, Peking University
+
+## Contact
+
+- `princhernwang@gmail.com`
+- `wlma@pku.edu.cn`
+- `wenzw@pku.edu.cn`
+
 ![M2F Overview](figs/M2F_overview.png)
 *Figure 1. High-level overview of M2F and its staged formalization process.*
 
@@ -83,3 +96,9 @@ The framework separates the workflow into two stages. Stage 1 compiles informal 
 - A staged compilation-repair pipeline scales formalization beyond isolated theorem tasks.
 - M2F achieves strong fully automatic performance and further improves with lightweight supervision.
 - Document-level formalization can reach high verifier pass rates under controlled, reproducible workflows.
+
+## License
+
+This repository is released under the `CC BY-NC 4.0` license  
+(Creative Commons Attribution-NonCommercial 4.0 International).  
+See the full terms in `LICENSE`.
