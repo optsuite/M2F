@@ -1,0 +1,520 @@
+[
+  {
+    "index": 1,
+    "label": "Text 1.1",
+    "env": "defn",
+    "number_components": [
+      1,
+      1
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{def}\nA subset $M$ of $\\R^n$ is called an affine set if $(1-\\lambda)x+lambda y\\in M$ for every $x\\in M,y\\in M$ and $\\lambda\\in\\R$.\n\\end{def}",
+    "dependencies": [],
+    "proof": null
+  },
+  {
+    "index": 2,
+    "label": "Theorem 1.1",
+    "env": "thm",
+    "number_components": [
+      1,
+      1
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{thm}\nTHEOREM 1.1. The subspaces of \\( R^n \\) are the affine sets which contain the origin.\n\\end{thm}",
+    "dependencies": [
+      "Text 1.1"
+    ],
+    "proof": "\\begin{proof}\nPROOF. Every subspace contains 0 and, being closed under addition and scalar multiplication, is in particular an affine set.\n\nConversely, suppose \\( M \\) is an affine set containing 0. For any \\( x \\in M \\) and \\( \\lambda \\in R \\), we have\n\n\\[\n\\lambda x = (1 - \\lambda)0 + \\lambda x \\in M,\n\\]\n\nso \\( M \\) is closed under scalar multiplication. Now, if \\( x \\in M \\) and \\( y \\in M \\), we have\n\n\\[\n\\frac{1}{2}(x + y) = \\frac{1}{2}x + (1 - \\frac{1}{2})y \\in M,\n\\]\n\nand hence\n\n\\[\nx + y = 2(\\frac{1}{2}(x + y)) \\in M.\n\\]\n\nThus \\( M \\) is also closed under addition and is a subspace. \\(\\|\\)\n\\end{proof}"
+  },
+  {
+    "index": 3,
+    "label": "Text 1.2",
+    "env": "defn",
+    "number_components": [
+      1,
+      2
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{def}\nFor $M \\subset \\mathbb{R}^n$ and $\\mathbf{a} \\in \\mathbb{R}^n$, the translate of $M$ by $\\mathbf{a}$ is defined to be the set \\[ M + \\mathbf{a} = \\{x + \\mathbf{a} \\mid x \\in M\\}. \\]\n\\end{def}",
+    "dependencies": [],
+    "proof": null
+  },
+  {
+    "index": 4,
+    "label": "Text 1.2.1",
+    "env": "thm",
+    "number_components": [
+      1,
+      2,
+      1
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{thm}\nLet affine set $M\\subset\\R^n$, point $a\\in\\R^n$, the translate $a + M$ is an affine set.\\end{thm}",
+    "dependencies": [
+      "Text 1.2"
+    ],
+    "proof": "\\begin{proof}\nLet $M \\subset \\mathbb{R}^n$ be an affine set and let $a \\in \\mathbb{R}^n$. Then the translate $a+M := \\{a+x : x\\in M\\}$ is an affine set.\\n\\n\\textbf{Proof.} In convex analysis, a set $M$ is affine if and only if it can be represented as $M = x_0 + L$, where $x_0 \\in \\mathbb{R}^n$ and $L \\subset \\mathbb{R}^n$ is a linear subspace. Assume $M = x_0 + L$. Then\\n\\n\\[ a + M = a + (x_0 + L) = (a + x_0) + L. \\]\\n\\nSince $L$ is a linear subspace, the set $(a+x_0)+L$ is affine by definition. Hence $a+M$ is affine.\\n\\nEquivalently, affine sets are characterized as those sets closed under affine combinations. For any $x,y \\in M$ and any $\\lambda \\in \\mathbb{R}$ with $\\lambda + (1-\\lambda) = 1$, one has $\\lambda x + (1-\\lambda)y \\in M$. Translation by $a$ preserves affine combinations, since\\n\\n\\[ \\lambda(a+x) + (1-\\lambda)(a+y) = a + (\\lambda x + (1-\\lambda)y), \\]\\n\\nwhich belongs to $a+M$. Therefore, the affine structure is invariant under translation, and $a+M$ is an affine set.\\end{proof}"
+  },
+  {
+    "index": 5,
+    "label": "Text 1.3",
+    "env": "defn",
+    "number_components": [
+      1,
+      3
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{def}\nAn affine set $M$ is said to be parallel to an affine set $L$ if $M = L + \\mathbf{a}$ for some $\\mathbf{a}$.\n\\end{def}",
+    "dependencies": [],
+    "proof": null
+  },
+  {
+    "index": 6,
+    "label": "Theorem 1.2",
+    "env": "thm",
+    "number_components": [
+      1,
+      2
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{thm}\nTHEOREM 1.2. Each non-empty affine set \\( M \\) is parallel to a unique subspace \\( L \\). This \\( L \\) is given by\n\n\\[\nL = M - M = \\{x - y \\mid x \\in M, y \\in M\\}.\n\\end{thm}",
+    "dependencies": [
+      "Theorem 1.1",
+      "Text 1.2",
+      "Text 1.3"
+    ],
+    "proof": "\\begin{proof}\nPROOF. Let us show first that \\( M \\) cannot be parallel to two different subspaces. Subspaces \\( L_1 \\) and \\( L_2 \\) parallel to \\( M \\) would be parallel to each other, so that \\( L_2 = L_1 + a \\) for some \\( a \\). Since \\( 0 \\in L_2 \\), we would then have \\( -a \\in L_1 \\), and hence \\( a \\in L_1 \\). But then \\( L_1 \\supset L_1 + a = L_2 \\). By a similar argument \\( L_2 \\supset L_1 \\), so \\( L_1 = L_2 \\). This establishes the uniqueness. Now observe that, for any \\( y \\in M \\), \\( M - y = M + (-y) \\) is a translate of \\( M \\) containing 0. By Theorem 1.1 and what we have just proved, this affine set must be the unique subspace \\( L \\) parallel to \\( M \\). Since \\( L = M - y \\) no matter which \\( y \\in M \\) is chosen, we actually have \\( L = M - M \\). \\(\\|\\)\n\\end{proof}"
+  },
+  {
+    "index": 7,
+    "label": "Text 1.4",
+    "env": "defn",
+    "number_components": [
+      1,
+      4
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{def}\nThe dimension of a non-empty affine set is defined as the dimension of the subspace parallel to it. (The dimension of $\\emptyset$ is $-1$ by convention.)\n\\end{def}",
+    "dependencies": [],
+    "proof": null
+  },
+  {
+    "index": 8,
+    "label": "Text 1.5",
+    "env": "defn",
+    "number_components": [
+      1,
+      5
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{def}\nAffine sets of dimension 0, 1 and 2 are called points, lines and planes, respectively. An $(n - 1)$-dimensional affine set in $\\mathbb{R}^n$ is called a hyperplane.\n\\end{def}",
+    "dependencies": [],
+    "proof": null
+  },
+  {
+    "index": 9,
+    "label": "Text 1.6",
+    "env": "defn",
+    "number_components": [
+      1,
+      6
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{def}\nGiven a subspace $L$ of $\\mathbb{R}^n$, the set of vectors $x$ such that $x \\perp L$, i.e. $x \\perp y$ for every $y \\in L$, is called the orthogonal complement of $L$, denoted $L^\\perp$.\n\\end{def}",
+    "dependencies": [],
+    "proof": null
+  },
+  {
+    "index": 10,
+    "label": "Theorem 1.3",
+    "env": "thm",
+    "number_components": [
+      1,
+      3
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{thm}\nTheorem 1.3. Given \\( \\beta \\in R \\) and a non-zero \\( b \\in R^n \\), the set\n\n\\[\nH = \\{ x \\mid \\langle x, b \\rangle = \\beta \\}\n\\]\n\nis a hyperplane in \\( R^n \\). Moreover, every hyperplane may be represented in this way, with \\( b \\) and \\( \\beta \\) unique up to a common non-zero multiple.\n\\end{thm}",
+    "dependencies": [
+      "Text 1.5"
+    ],
+    "proof" : "\\textbf{Proof.} Let $b \\in \\mathbb{R}^n$ be nonzero and $\\beta \\in \\mathbb{R}$. Consider the set\\n\\n\\[ H = \\{ x \\in \\mathbb{R}^n \\mid \\langle x, b \\rangle = \\beta \\}. \\]\\n\\nThe mapping $x \\mapsto \\langle x, b \\rangle$ is a nontrivial linear functional. Its kernel\\n\\n\\[ L = \\{ x \\mid \\langle x, b \\rangle = 0 \\} \\]\\n\\nis a linear subspace of dimension $n-1$. Choosing any $x_0$ with $\\langle x_0, b \\rangle = \\beta$, we may write\\n\\n\\[ H = x_0 + L, \\]\\n\\nwhich shows that $H$ is an affine set whose direction space has dimension $n-1$. Hence $H$ is a hyperplane in $\\mathbb{R}^n$.\\n\\nConversely, let $H \\subset \\mathbb{R}^n$ be any hyperplane. By definition, there exists an $(n-1)$-dimensional linear subspace $L$ and a point $x_0$ such that $H = x_0 + L$. Since $L$ has codimension one, there exists a nonzero vector $b$ such that\\n\\n\\[ L = \\{ x \\mid \\langle x, b \\rangle = 0 \\}. \\]\\n\\nDefining $\\beta := \\langle x_0, b \\rangle$, we obtain\\n\\n\\[ H = \\{ x \\mid \\langle x, b \\rangle = \\beta \\}. \\]\\n\\nFinally, if $(b, \\beta)$ and $(b', \\beta')$ yield the same hyperplane, then $b'$ must be a nonzero scalar multiple of $b$, say $b' = \\lambda b$ with $\\lambda \\neq 0$, and necessarily $\\beta' = \\lambda \\beta$. Thus $b$ and $\\beta$ are unique up to a common nonzero multiple."
+  },
+  {
+    "index": 11,
+    "label": "Text 1.7",
+    "env": "defn",
+    "number_components": [
+      1,
+      7
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{def}\nIn Theorem 1.3, the vector $b$ is called a normal to the hyperplane $H$.\n\\end{def}",
+    "dependencies": [
+      "Theorem 1.3"
+    ],
+    "proof": null
+  },
+  {
+    "index": 12,
+    "label": "Theorem 1.4",
+    "env": "thm",
+    "number_components": [
+      1,
+      4
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{thm}\nTheorem 1.4. Given \\( b \\in R^m \\) and an \\( m \\times n \\) real matrix \\( B \\), the set\n\n\\[\nM = \\{ x \\in R^n \\mid Bx = b \\}\n\\]\n\nis an affine set in \\( R^n \\). Moreover, every affine set may be represented in this way.\n\\end{thm}",
+    "dependencies": [
+      "Text 1.3",
+      "Text 1.5",
+      "Text 1.6"
+    ],
+    "proof": "\\begin{proof}\nIf \\( x \\in M, y \\in M \\) and \\( \\lambda \\in R \\), then for \\( z = (1 - \\lambda)x + \\lambda y \\) one has\n\n\\[\nBz = (1 - \\lambda)Bx + \\lambda By = (1 - \\lambda)b + \\lambda b = b,\n\\]\n\nso \\( z \\in M \\). Thus the given \\( M \\) is affine.\n\nOn the other hand, starting with an arbitrary non-empty affine set \\( M \\) other than \\( R^n \\) itself, let \\( L \\) be the subspace parallel to \\( M \\). Let \\( b_1, \\ldots, b_m \\) be a basis for \\( L^\\perp \\). Then\n\n\\[\nL = (L^\\perp)^\\perp = \\{x \\mid x \\perp b_1, \\ldots, x \\perp b_m\\}\n\\]\n\n\\[\n= \\{x \\mid \\langle x, b_i \\rangle = 0, \\quad i = 1, \\ldots, m\\} = \\{x \\mid Bx = 0\\},\n\\]\n\nwhere \\( B \\) is the \\( m \\times n \\) matrix whose rows are \\( b_1, \\ldots, b_m \\). Since \\( M \\) is parallel to \\( L \\), there exists an \\( a \\in R^n \\) such that\n\n\\[\nM = L + a = \\{x \\mid B(x - a) = 0\\} = \\{x \\mid Bx = b\\},\n\\]\n\nwhere \\( b = Ba \\). (The affine sets \\( R^n \\) and \\( \\emptyset \\) can be represented in the form in the theorem by taking \\( B \\) to be the \\( m \\times n \\) zero matrix, say, with \\( b = 0 \\) in the case of \\( R^n \\) and \\( b \\neq 0 \\) in the case of \\( \\emptyset \\).)\n\n\\end{proof}"
+  },
+  {
+    "index": 13,
+    "label": "Corollary 1.4.1",
+    "env": "cor",
+    "number_components": [
+      1,
+      4,
+      1
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{cor}\n\\textbf{Corollary 1.4.1.} Every affine subset of \\( R^n \\) is an intersection of a finite collection of hyperplanes.\n\\end{cor}",
+    "dependencies": [
+      "Theorem 1.4"
+    ],
+    "proof": "\\begin{proof}\nObserve that in Theorem 1.4 one has\n\n\\[\nM = \\{x \\mid \\langle x, b_i \\rangle = \\beta_i, i = 1, \\ldots, m\\} = \\bigcap_{i=1}^m H_i,\n\\]\n\nwhere \\( b_i \\) is the \\( i \\)th row of \\( B \\), \\( \\beta_i \\) is the \\( i \\)th component of \\( b \\), and\n\n\\[\nH_i = \\{x \\mid \\langle x, b_i \\rangle = \\beta_i\\}.\n\\]\n\nEach \\( H_i \\) is a hyperplane (\\( b_i \\neq 0 \\)), or the empty set (\\( b_i = 0, \\beta_i \\neq 0 \\)), or \\( R^n \\) (\\( b_i = 0, \\beta_i = 0 \\)). The empty set may itself be regarded as the intersection of two different parallel hyperplanes, while \\( R^n \\) may be regarded as the intersection of the empty collection of hyperplanes of \\( R^n \\).\\end{proof}"
+  },
+  {
+    "index": 14,
+    "label": "Text 1.8",
+    "env": "defn",
+    "number_components": [
+      1,
+      8
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{def}\nGiven any \\( S \\subset R^n \\) there exists a unique smallest affine set containing \\( S \\) (namely, the intersection of the collection of affine sets \\( M \\) such that \\( M \\supset S \\)). This set is called the affine hull of \\( S \\) and is denoted by \\( \\text{aff} S \\)\n\\end{def}",
+    "dependencies": [],
+    "proof": null
+  },
+  {
+    "index": 15,
+    "label": "Text 1.8.1",
+    "env": "thm",
+    "number_components": [
+      1,
+      8,
+      1
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{thm}\\( \\text{aff } S \\) consists of all the vectors of the form \\( \\lambda_1 x_1 + \\cdots + \\lambda_m x_m \\), such that \\( x_i \\in S \\) and \\( \\lambda_1 + \\cdots + \\lambda_m = 1 \\).\\end{thm}",
+    "dependencies": [
+      "Text 1.8"
+    ],
+    "proof": "\\begin{proof}Let $S \\subset \\mathbb{R}^n$. The affine hull $\\\\operatorname{aff} S$ consists exactly of all vectors of the form $\\\\lambda_1 x_1 + \\\\cdots + \\\\lambda_m x_m$, where $x_i \\in S$ and the coefficients satisfy $\\\\lambda_1 + \\\\cdots + \\\\lambda_m = 1$.\\n\\n\\textbf{Proof.} In convex analysis, the affine hull $\\\\operatorname{aff} S$ is defined as the smallest affine set containing $S$, equivalently the intersection of all affine sets that contain $S$. An affine set is characterized by closure under affine combinations: if $x,y$ belong to an affine set, then $\\\\lambda x + (1-\\\\lambda)y$ also belongs to it for all $\\\\lambda \\in \\mathbb{R}$.\\n\\nFirst, let $A$ denote the set of all finite affine combinations of points in $S$, i.e., all vectors of the form $\\\\lambda_1 x_1 + \\\\cdots + \\\\lambda_m x_m$ with $x_i \\in S$ and $\\\\sum_{i=1}^m \\\\lambda_i = 1$. One verifies directly that $A$ is an affine set: it is nonempty whenever $S$ is nonempty, and it is closed under affine combinations. Moreover, since choosing $m=1$ and $\\\\lambda_1=1$ yields $x_1$, we have $S \\subset A$. Hence, by minimality of the affine hull, $\\\\operatorname{aff} S \\subset A$.\\n\\nConversely, let $M$ be any affine set containing $S$. Because $M$ is closed under affine combinations, every affine combination of points of $S$ must belong to $M$. Therefore $A \\subset M$ for every affine set $M$ containing $S$. Taking the intersection over all such $M$ gives $A \\subset \\\\operatorname{aff} S$.\\n\\nCombining both inclusions, we conclude that $\\\\operatorname{aff} S = A$, i.e., the affine hull of $S$ consists exactly of all finite affine combinations of elements of $S$.\\end{proof}"
+  },
+  {
+    "index": 16,
+    "label": "Text 1.9",
+    "env": "defn",
+    "number_components": [
+      1,
+      9
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{def}A set of \\( m + 1 \\) points \\( b_0, b_1, \\ldots, b_m \\) is said to be affinely independent if $\\text{aff}\\{b_0, b_1, \\ldots, b_m\\}$ is $m$-dimensional.\\end{def}",
+    "dependencies": [],
+    "proof": null
+  },
+  {
+    "index": 17,
+    "label": "Text 1.9.1",
+    "env": "thm",
+    "number_components": [
+      1,
+      9,
+      1
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{thm}\nTheorem. Let $b_0, b_1, \\dots, b_m \\in \\mathbb{R}^n$. Define\\n\\n\\[ L := \\\\operatorname{aff}\\\\{0, b_1 - b_0, \\dots, b_m - b_0\\\\}. \\]\\n\\nThen\\n\\n\\[ \\\\operatorname{aff}\\\\{b_0, b_1, \\dots, b_m\\\\} = b_0 + L. \\]\\n\\nMoreover, the points $b_0, b_1, \\dots, b_m$ are affinely independent if and only if the vectors $b_1 - b_0, \\dots, b_m - b_0$ are linearly independent.\\end{thm}",
+    "dependencies": [
+      "Theorem 1.1",
+      "Text 1.8",
+      "Text 1.9"
+    ],
+    "proof": "\\begin{proof}\nProof. Consider the translation mapping $T(x) = x - b_0$. Translation preserves affine structure, so\\n\\n\\[ T(\\\\operatorname{aff}\\\\{b_0, b_1, \\dots, b_m\\\\}) = \\\\operatorname{aff}\\\\\\{0, b_1 - b_0, \\dots, b_m - b_0\\\\\\}. \\]\\n\\nApplying the inverse translation yields\\n\\n\\[ \\\\operatorname{aff}\\\\{b_0, b_1, \\dots, b_m\\\\} = b_0 + \\\\operatorname{aff}\\\\\\{0, b_1 - b_0, \\dots, b_m - b_0\\\\\\} = b_0 + L. \\]\\n\\nBy standard results in convex analysis, the affine hull of a set containing the origin coincides with the linear span of that set. Hence $L$ is the smallest linear subspace containing $b_1 - b_0, \\dots, b_m - b_0$. Therefore, $\\\\dim L = m$ if and only if these vectors are linearly independent.\\n\\nBy definition, the points $b_0, b_1, \\dots, b_m$ are affinely independent if and only if $\\\\dim \\\\operatorname{aff}\\\\{b_0, b_1, \\dots, b_m\\\\} = m$, which holds if and only if $\\\\dim L = m$. This is equivalent to linear independence of $b_1 - b_0, \\dots, b_m - b_0$.\\end{proof}"
+  },
+  {
+    "index": 18,
+    "label": "Text 1.9.2",
+    "env": "thm",
+    "number_components": [
+      1,
+      9,
+      2
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{thm}\nLet $b_0, b_1, \\dots, b_m \\in \\mathbb{R}^n$ and let $M = \\\\operatorname{aff}\\\\{b_0, b_1, \\dots, b_m\\\\}$. Every point $x \\in M$ admits a representation\\n\\n\\[ x = \\lambda_0 b_0 + \\lambda_1 b_1 + \\cdots + \\lambda_m b_m, \\qquad \\lambda_0 + \\lambda_1 + \\cdots + \\lambda_m = 1. \\]\\n\\nMoreover, the coefficients $(\\lambda_0, \\lambda_1, \\dots, \\lambda_m)$ are unique if and only if the points $b_0, b_1, \\dots, b_m$ are affinely independent.\\end{thm}",
+    "dependencies": [
+      "Theorem 1.1",
+      "Text 1.8",
+      "Text 1.9"
+    ],
+    "proof": "\\begin{proof}\nProof. Translating by $-b_0$, we obtain\\n\\n\\[ M - b_0 = \\\\operatorname{aff}\\\\\\{0, b_1 - b_0, \\dots, b_m - b_0\\\\\\}. \\]\\n\\nSince this affine hull contains the origin, it coincides with the linear span of its generators. Hence $M - b_0 = L = \\\\operatorname{span}\\\\\\{b_1 - b_0, \\dots, b_m - b_0\\\\\\}$, and therefore $M = b_0 + L$.\\n\\nEvery vector $x \\in M$ can thus be written as\\n\\n\\[ x = b_0 + \\sum_{i=1}^m \\lambda_i (b_i - b_0) = \\left(1 - \\sum_{i=1}^m \\lambda_i\\right) b_0 + \\sum_{i=1}^m \\lambda_i b_i, \\]\\n\\nwhich is of the stated affine-combination form with coefficients summing to one.\\n\\nIf the points $b_0, b_1, \\dots, b_m$ are affinely independent, then the vectors $b_1 - b_0, \\dots, b_m - b_0$ are linearly independent, so the representation of $x - b_0$ in the basis of $L$ is unique, implying uniqueness of the coefficients $(\\lambda_0, \\lambda_1, \\dots, \\lambda_m)$. Conversely, if the coefficients are unique, then the representation of $0$ as an affine combination is unique, which forces linear independence of $b_1 - b_0, \\dots, b_m - b_0$, and hence affine independence of $b_0, b_1, \\dots, b_m$. \\end{proof}"
+  },
+  {
+    "index": 19,
+    "label": "Text 1.10",
+    "env": "defn",
+    "number_components": [
+      1,
+      10
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{def}\nA single-valued mapping $T:x \\to Tx$ from $\\mathbb{R}^n$ to $\\mathbb{R}^m$ is called an affine transformation if \\[ T((1 - \\lambda)x + \\lambda y) = (1 - \\lambda)Tx + \\lambda Ty \\] for every $x$ and $y$ in $\\mathbb{R}^n$ and $\\lambda \\in \\mathbb{R}$.\n\\end{def}",
+    "dependencies": [],
+    "proof": null
+  },
+  {
+    "index": 20,
+    "label": "Theorem 1.5",
+    "env": "thm",
+    "number_components": [
+      1,
+      5
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{thm}\nTheorem 1.5. The affine transformations from $R^n$ to $R^m$ are the mappings $T$ of the form $Tx = Ax + a$, where $A$ is a linear transformation and $a \\in R^m$.\n\\end{thm}",
+    "dependencies": [
+      "Theorem 1.1"
+    ],
+    "proof": "\\begin{proof}\nProof. If $T$ is affine, let $a = T0$ and $Ax = Tx - a$. Then $A$ is an affine transformation with $A0 = 0$. A simple argument resembling the one in Theorem 1.1 shows that $A$ is actually linear.\n\nConversely, if $Tx = Ax + a$ where $A$ is linear, one has\n\n\\[\nT((1 - \\lambda)x + \\lambda y) = (1 - \\lambda)Ax + \\lambda Ay + a = (1 - \\lambda)Tx + \\lambda Ty.\n\\]\n\nThus $T$ is affine. $\\|$\n\\end{proof}"
+  },
+  {
+    "index": 21,
+    "label": "Text 1.11",
+    "env": "thm",
+    "number_components": [
+      1,
+      11
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{thm}\nLet $T : \\mathbb{R}^n \\to \\mathbb{R}^n$ be an affine transformation. If $A$ is invertible, then the inverse mapping $T^{-1}$ is also an affine transformation.\n\\end{thm}",
+    "dependencies": [
+      "Theorem 1.5"
+    ],
+    "proof": "\\begin{proof}\nProof. Suppose that $T$ is invertible. Then the linear part $A$ must be invertible, since otherwise $T$ would fail to be injective.\\n\\nSolving the equation $y = Ax + b$ for $x$ gives\\n\\n\\[ x = A^{-1}(y - b) = A^{-1}y - A^{-1}b. \\]\\n\\nHence the inverse mapping is\\n\\n\\[ T^{-1}(y) = A^{-1}y - A^{-1}b, \\]\\n\\nwhich is of the affine form with linear part $A^{-1}$ and translation vector $-A^{-1}b$.\\n\\nEquivalently, one may characterize affine mappings as those preserving affine combinations. Since $T$ is bijective and preserves affine combinations, its inverse must also preserve affine combinations, and therefore is affine. This completes the proof. \n\\end{proof}"
+  },
+  {
+    "index": 22,
+    "label": "Text 1.12",
+    "env": "thm",
+    "number_components": [
+      1,
+      12
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{thm}\nLet $T : \\mathbb{R}^n \\to \\mathbb{R}^m$ be an affine transformation. Then for every affine set $M \\subset \\mathbb{R}^n$, the image $TM := \\{Tx \\mid x \\in M\\}$ is an affine set in $\\mathbb{R}^m$. Consequently, for every set $S \\subset \\mathbb{R}^n$, affine transformations preserve affine hulls in the sense that\\n\\n\\[ \\\\operatorname{aff}(TS) = T(\\\\operatorname{aff} S). \n\\end{thm}",
+    "dependencies": [
+      "Text 1.11"
+    ],
+    "proof": "\\begin{proof}\n Let $T(x) = Ax + b$ be affine and let $M \\subset \\mathbb{R}^n$ be an affine set. Take any $y_1, y_2 \\in TM$ with $y_i = T(x_i)$ for some $x_i \\in M$, and any $\\lambda \\in \\mathbb{R}$. Since $M$ is affine, $\\lambda x_1 + (1-\\lambda)x_2 \\in M$. Applying $T$ yields\\n\\n\\[ T(\\lambda x_1 + (1-\\lambda)x_2) = \\lambda T(x_1) + (1-\\lambda)T(x_2) = \\lambda y_1 + (1-\\lambda)y_2, \\]\\n\\nwhich belongs to $TM$. Hence $TM$ is closed under affine combinations and therefore is an affine set.\\n\\nTo prove preservation of affine hulls, note first that $T(\\\\operatorname{aff} S)$ is affine by the previous argument and contains $TS$, since $S \\subset \\\\operatorname{aff} S$. By minimality of the affine hull, this implies\\n\\n\\[ \\\\operatorname{aff}(TS) \\subset T(\\\\operatorname{aff} S). \\]\\n\\nConversely, any affine set $N \\subset \\mathbb{R}^m$ containing $TS$ has preimage $T^{-1}(N)$ affine and containing $S$. Hence $\\\\operatorname{aff} S \\subset T^{-1}(N)$, which implies $T(\\\\operatorname{aff} S) \\subset N$. Since this holds for every affine $N$ containing $TS$, we obtain\\n\\n\\[ T(\\\\operatorname{aff} S) \\subset \\\\operatorname{aff}(TS). \\]\\n\\nCombining the two inclusions yields $\\\\operatorname{aff}(TS) = T(\\\\operatorname{aff} S)$. \n\\end{proof}"
+  },
+  {
+    "index": 23,
+    "label": "Theorem 1.6",
+    "env": "thm",
+    "number_components": [
+      1,
+      6
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{thm}\nTheorem 1.6. Let \\(\\{ b_0, b_1, \\ldots, b_m \\}\\) and \\(\\{ b'_0, b'_1, \\ldots, b'_m \\}\\) be affinely independent sets in \\( R^n \\). Then there exists a one-to-one affine transformation \\( T \\) of \\( R^n \\) onto itself, such that \\( Tb_i = b'_i \\) for \\( i = 0, \\ldots, m \\). If \\( m = n \\), \\( T \\) is unique.\n\\end{thm}",
+    "dependencies": [
+      "Theorem 1.5",
+      "Text 1.9"
+    ],
+    "proof": "\\begin{proof}\nProof. Enlarging the given affinely independent sets if necessary, we can reduce the question to the case where \\( m = n \\). Then, as is well known in linear algebra, there exists a unique one-to-one linear transformation \\( A \\) of \\( R^n \\) onto itself carrying the basis \\( b_1 - b_0, \\ldots, b_n - b_0 \\) of \\( R_n \\) onto the basis \\( b'_1 - b'_0, \\ldots, b'_n - b'_0 \\). The desired affine transformation is then given by \\( Tx = Ax + a \\), where \\( a = b'_0 - Ab_0 \\). \\(\\|\\)\n\\end{proof}"
+  },
+  {
+    "index": 24,
+    "label": "Corollary 1.6.1",
+    "env": "cor",
+    "number_components": [
+      1,
+      6,
+      1
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{cor}\nCorollary 1.6.1. Let \\( M_1 \\) and \\( M_2 \\) be any two affine sets in \\( R^n \\) of the same dimension. Then there exists a one-to-one affine transformation \\( T \\) of \\( R^n \\) onto itself such that \\( TM_1 = M_2 \\).\n\\end{cor}",
+    "dependencies": [
+      "Text 1.9",
+      "Text 1.10"
+    ],
+    "proof": "\\begin{proof}\nProof. Any \\( m \\)-dimensional affine set can be expressed as the affine hull of an affinely independent set of \\( m + 1 \\) points, and affine hulls are preserved by affine transformations. \\(\\|\\)\n\\end{proof}"
+  },
+  {
+    "index": 25,
+    "label": "Text 1.13",
+    "env": "defn",
+    "number_components": [
+      1,
+      13
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{def}\nLet $M \\subset \\mathbb{R}^N$ be an $n$-dimensional affine set with $0 < n < N$, and set $m := N - n$. A \\emph{Tucker representation} of $M$ is a representation obtained after a permutation of coordinates, in which every vector $x = (\\xi_1, \\dots, \\xi_N) \\in \\mathbb{R}^N$ belongs to $M$ if and only if its coordinates satisfy a system of affine equations of the form\\n\\n\\[ \\xi_{n+i} = \\alpha_{i1} \\xi_1 + \\cdots + \\alpha_{in} \\xi_n + \\alpha_i, \\qquad i = 1, \\dots, m. \\]\\n\\nEquivalently, a Tucker representation expresses $M$ as the graph of an affine transformation from $\\mathbb{R}^n$ to $\\mathbb{R}^m$. In the special case where $M$ is a linear subspace, the constants $\\alpha_i$ vanish and the representation is homogeneous. \n\\end{def}",
+    "dependencies": [],
+    "proof": null
+  },
+  {
+    "index": 26,
+    "label": "Text 1.13.1",
+    "env": "thm",
+    "number_components": [
+      1,
+      13,
+      1
+    ],
+    "context": {
+      "chapter": "Basic Concepts",
+      "section": "Affine Sets",
+      "chapter_number": "1",
+      "section_number": "1"
+    },
+    "content": "\\begin{thm}\nTheorem. Let X be a finite-dimensional real normed linear space and let C \\subset X be a nontrivial affine set, i.e., C \\neq \\varnothing and C \\neq X. Then there exist finite-dimensional real normed linear spaces Y and Z, a linear subspace L \\subset Y, a continuous affine map T \\colon Y \\to Z, and a point y_{0} \\in Y such that\n\\[\nC = \\{\\, x \\in X : x = T(y),\\; y \\in L + y_{0} \\,\\}.\n\\]\nEquivalently, there exist a finite-dimensional real normed linear space Y, a continuous linear map A \\colon Y \\to X and a point x_{0} \\in X such that\n\\[\nC = x_{0} + A(Y),\n\\]\nand, with respect to a suitable decomposition Y = Y_{1} \\times Y_{2}, C can be written as the graph of an affine mapping f \\colon Y_{1} \\to Y_{2}, that is,\n\\[\nC = \\{\\,(y_{1}, f(y_{1})) : y_{1} \\in Y_{1}\\,\\}.\n\\]\nIn particular, every nontrivial affine set in a finite-dimensional real normed linear space is (up to an isomorphism of the ambient space) the graph of an affine transformation between two finite-dimensional real normed linear spaces.\n\\end{thm}",
+    "dependencies": [
+      "Text 1.9",
+      "Text 1.10"
+    ],
+    "proof": "\\begin{proof}\nProof.Let X be a finite-dimensional real normed linear space and let C \\subset X be a nontrivial affine set.\n\nStep 1: Reduction to a linear subspace.\\nChoose any point x_{0} \\in C. Since C is affine, the translation\n\\[\nL := C - x_{0} := \\{ x - x_{0} : x \\in C \\}\n\\]\nis a linear subspace of X. Indeed, for any u, v \\in L there exist x, y \\in C such that u = x - x_{0} and v = y - x_{0}. For any \\alpha, \\beta \\in \\mathbb{R} with \\alpha + \\beta = 1 we have\n\\[\n\\alpha x + \\beta y \\in C\n\\]\nby affinity of C, and\n\\[\n\\alpha u + \\beta v = (\\alpha x + \\beta y) - x_{0} \\in L.\n\\]\nMoreover, 0 = x_{0} - x_{0} \\in L, and L is closed under scalar multiplication, so L is a linear subspace of X. Clearly,\n\\[\nC = x_{0} + L = \\{ x_{0} + \\ell : \\ell \\in L \\}.\n\\]\nSince C is nontrivial, we have L \\neq \\{0\\} and L \\neq X.\n\nStep 2: Linear isomorphism with a product space.\\nLet n = \\dim X and k = \\dim L, where 1 \\le k < n. Choose a linear subspace W \\subset X such that\n\\[\nX = L \\oplus W,\n\\]\nthat is, every x \\in X can be uniquely written as x = \\ell + w with \\ell \\in L and w \\in W, and L \\cap W = \\{0\\}. The existence of such a complement W is guaranteed in finite dimensions.\n\nDefine the linear isomorphism\n\\[\n\\Phi \\colon X \\to L \\times W, \\qquad \\Phi(x) = (\\ell, w)\n\\]\nwhere x = \\ell + w with \\ell \\in L and w \\in W. Then \\Phi is a bijective linear map with linear inverse\n\\[\n\\Phi^{-1}(\\ell, w) = \\ell + w.\n\\]\n\nStep 3: Representation of C as a graph in a product space.\\nFor x \\in C we have x = x_{0} + \\ell with \\ell \\in L. Write x_{0} = \\ell_{0} + w_{0} according to the decomposition X = L \\oplus W, with uniquely determined \\ell_{0} \\in L and w_{0} \\in W. Then\n\\[\nx = x_{0} + \\ell = (\\ell_{0} + w_{0}) + \\ell = (\\ell_{0} + \\ell) + w_{0}.\n\\]\nApplying \\Phi we obtain\n\\[\n\\Phi(x) = (\\ell_{0} + \\ell, w_{0}) \\in L \\times W.\n\\]\nHence\n\\[\n\\Phi(C) = \\{\\, (\\ell', w_{0}) : \\ell' \\in L \\,\\}.\n\\]\nThis shows that, in the coordinates given by \\Phi, the set C is an affine subspace of L \\times W of the form L \\times \\{w_{0}\\}.\n\nStep 4: Identification as a graph of an affine map.\\nDefine Y_{1} := L and Y_{2} := W, so that L \\times W = Y_{1} \\times Y_{2}. Define an affine map f \\colon Y_{1} \\to Y_{2} by\n\\[\nf(\\ell') := w_{0}, \\qquad \\ell' \\in Y_{1}.\n\\]\nThen f is affine (indeed, linear plus a constant) and\n\\[\n\\Phi(C) = \\{\\, (\\ell', f(\\ell')) : \\ell' \\in Y_{1} \\,\\},\n\\]\nso \\Phi(C) is exactly the graph of the affine map f from Y_{1} to Y_{2}.\n\nStep 5: Transfer back to the original space.\\nSince \\Phi is a linear isomorphism, we may equivalently say that C is the image under \\Phi^{-1} of the graph of f, that is,\n\\[\nC = \\Phi^{-1} \\bigl( \\operatorname{gph} f \\bigr), \\qquad \\operatorname{gph} f := \\{ (\\ell', f(\\ell')) : \\ell' \\in Y_{1} \\}.\n\\]\nThus C is, up to an isomorphism of the ambient space, the graph of an affine transformation between finite-dimensional real normed linear spaces.\n\nFinally, if we simply choose Y := Y_{1} and define the affine map T \\colon Y \\to X by\n\\[\nT(\\ell') := x_{0} + \\ell', \\qquad \\ell' \\in Y,\n\\]\nthen\n\\[\nC = x_{0} + L = T(Y),\n\\]\nwhich is the image of Y under an affine map into X. Combining this with the product representation above yields the equivalent formulations stated in the theorem.\\n\\end{proof}"
+  }
+]

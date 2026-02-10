@@ -2,26 +2,12 @@
 
 M2F (Math-to-Formal) is a framework for translating textbook- and paper-level mathematics into Lean projects that pass machine verification at scale.
 
-## Authors
-
-Zichen Wang$^{1}$, Wanli Ma$^{2}$, Zaiwen Wen$^{2}$
-
-$^{1}$ School of Mathematical Sciences, Peking University  
-$^{2}$ Beijing International Center for Mathematical Research, Peking University
-
-## Contact
-
-- `princhernwang@gmail.com`
-- `wlma@pku.edu.cn`
-- `wenzw@pku.edu.cn`
-
 ![M2F Overview](figs/M2F_overview.png)
 *Figure 1. High-level overview of M2F and its staged formalization process.*
 
-## Abstract
+## Overview
 
-M2F addresses a central bottleneck in machine-assisted mathematics: moving from isolated theorem proving to document-level formalization.  
-The framework separates the workflow into two stages. Stage 1 compiles informal statements into Lean declaration skeletons and repairs structural inconsistencies. Stage 2 freezes statement signatures and focuses on proof completion through verifier-guided repair. This staged design improves stability, interpretability, and end-to-end pass rates.
+M2F addresses a central bottleneck in machine-assisted mathematics: moving from isolated theorem proving to document-level formalization. The framework separates the workflow into two stages. Stage 1 compiles informal statements into Lean declaration skeletons and repairs structural inconsistencies. Stage 2 freezes statement signatures and focuses on proof completion through verifier-guided repair. This staged design improves stability, interpretability, and end-to-end pass rates.
 
 ## At a Glance
 
@@ -53,6 +39,17 @@ The framework separates the workflow into two stages. Stage 1 compiles informal 
 - **Cross-prover benchmark:** FATE-H for direct and reproducible comparison of pass rates.
 - **Long-document setting:** large mathematical sources translated into executable Lean projects.
 - **Core metrics:** Pass Success Rate (PSR), verifier-call efficiency, and verifier-normalized cost.
+
+## Example Demonstration
+
+An end-to-end sample is provided in `example/` based on Section 1 (Affine Sets) of Rockafellar's convex analysis:
+
+- **Structured source input:** `example/section01.json`
+- **Generated Lean files:** `example/Rockafellar_convex_analysis_section01/section01_part1.lean`, `example/Rockafellar_convex_analysis_section01/section01_part2.lean`, `example/Rockafellar_convex_analysis_section01/section01_part3.lean`, `example/Rockafellar_convex_analysis_section01/section01_part4.lean`
+- **Merged entry file:** `example/Rockafellar_convex_analysis_section01/section01.lean`
+- **Reference generated Lean code:** [`optsuite/ReasBook/ReasBook`](https://github.com/optsuite/ReasBook/tree/main/ReasBook)
+
+This example illustrates the M2F workflow from informal statements to machine-checkable Lean formalization.
 
 ## Result Highlights
 
@@ -96,6 +93,19 @@ The framework separates the workflow into two stages. Stage 1 compiles informal 
 - A staged compilation-repair pipeline scales formalization beyond isolated theorem tasks.
 - M2F achieves strong fully automatic performance and further improves with lightweight supervision.
 - Document-level formalization can reach high verifier pass rates under controlled, reproducible workflows.
+
+## Authors
+
+Zichen Wang<sup>1</sup>, Wanli Ma<sup>2</sup>, Zaiwen Wen<sup>2</sup>
+
+Emails:
+- `zichenwang25@stu.pku.edu.cn`
+- `wlma@pku.edu.cn`
+- `wenzw@pku.edu.cn`
+
+Affiliations:
+- <sup>1</sup> School of Mathematical Sciences, Peking University
+- <sup>2</sup> Beijing International Center for Mathematical Research, Peking University
 
 ## License
 

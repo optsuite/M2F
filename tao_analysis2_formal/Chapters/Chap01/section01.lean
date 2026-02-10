@@ -1,2 +1,0 @@
-import tao_analysis2_formal.Chapters.Chap01.section01_part1
-import tao_analysis2_formal.Chapters.Chap01.section01_part2
