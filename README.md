@@ -2,7 +2,7 @@
 
 M2F (Math-to-Formal) is a framework for translating textbook- and paper-level mathematics into Lean projects that pass machine verification at scale.
 
-![M2F Overview](figs/M2F_overview.png)
+![M2F Overview](figs/M2F_pipeline.png)
 *Figure 1. High-level overview of M2F and its staged formalization process.*
 
 ## Overview
@@ -42,14 +42,15 @@ M2F addresses a central bottleneck in machine-assisted mathematics: moving from 
 
 ## Example Demonstration
 
-An end-to-end sample is provided in `example/` based on Section 1 (Affine Sets) of Rockafellar's convex analysis:
+An end-to-end sample is provided in `example/` based on Section 1 (Affine Sets) of Rockafellar's convex analysis. The workflow in this example is:
+`PDF source -> structured JSON -> Lean formalization`.
 
-- **Structured source input:** `example/section01.json`
+- **Structured source input (extracted from PDF):** `example/section01.json`
 - **Generated Lean files:** `example/Rockafellar_convex_analysis_section01/section01_part1.lean`, `example/Rockafellar_convex_analysis_section01/section01_part2.lean`, `example/Rockafellar_convex_analysis_section01/section01_part3.lean`, `example/Rockafellar_convex_analysis_section01/section01_part4.lean`
 - **Merged entry file:** `example/Rockafellar_convex_analysis_section01/section01.lean`
 - **Reference generated Lean code:** [`optsuite/ReasBook/ReasBook`](https://github.com/optsuite/ReasBook/tree/main/ReasBook)
 
-This example illustrates the M2F workflow from informal statements to machine-checkable Lean formalization.
+This example explicitly starts from PDF parsing output (`section01.json`) and then performs formalization from JSON to machine-checkable Lean code.
 
 ## Result Highlights
 
@@ -57,11 +58,6 @@ This example illustrates the M2F workflow from informal statements to machine-ch
 
 ![M2F End-to-End Figure](./M2F.png)
 *Figure 2. End-to-end architecture for document-level formalization with M2F.*
-
-### System Pipeline
-
-![M2F Pipeline](figs/M2F_pipeline.png)
-*Figure 3. Pipeline view of Stage 1 statement compilation and Stage 2 proof repair.*
 
 ### FATE-H Across Provers (PSR)
 
