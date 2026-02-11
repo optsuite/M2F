@@ -34,6 +34,11 @@ M2F addresses a central bottleneck in machine-assisted mathematics: moving from 
 - Iteratively closes proof holes with verifier feedback.
 - Optimizes proof success under fixed declarations for reliable end-to-end checking.
 
+### End-to-End System Figure
+
+![M2F End-to-End Figure](./M2F.png)
+*Figure 2. End-to-end architecture for document-level formalization with M2F.*
+
 ## Experimental Scope
 
 - **Cross-prover benchmark:** FATE-H for direct and reproducible comparison of pass rates.
@@ -54,10 +59,17 @@ This example explicitly starts from PDF parsing output (`section01.json`) and th
 
 ## Result Highlights
 
-### End-to-End System Figure
+### Long-Document (Book) Extraction Summary
 
-![M2F End-to-End Figure](./M2F.png)
-*Figure 2. End-to-end architecture for document-level formalization with M2F.*
+**Table 1. Book-level extraction and formalization summary (long-document setting).**
+
+| Item | Value |
+|---|---|
+| Source domain | Textbook- and paper-level mathematical documents |
+| Extraction/formalization pipeline | `PDF source -> structured JSON -> Lean formalization` |
+| Long-document corpus scale | **479 pages** |
+| Generated Lean project size | **153,853 LoC** |
+| Stage 2 on matched statements | **100% PSR** |
 
 ### FATE-H Across Provers (PSR)
 
@@ -65,7 +77,7 @@ This example explicitly starts from PDF parsing output (`section01.json`) and th
 *Figure 4. Pass Success Rate (PSR) comparison across provers on FATE-H.*
 [PDF version](figs/fateh_psr_bar_v4.pdf)
 
-**Table 1. M2F summary results on FATE-H and matched-statement settings.**
+**Table 2. M2F summary results on FATE-H and matched-statement settings.**
 
 | Condition | PSR |
 |---|---|
@@ -90,18 +102,29 @@ This example explicitly starts from PDF parsing output (`section01.json`) and th
 - M2F achieves strong fully automatic performance and further improves with lightweight supervision.
 - Document-level formalization can reach high verifier pass rates under controlled, reproducible workflows.
 
-## Authors
+## Contact
 
-Zichen Wang<sup>1</sup>, Wanli Ma<sup>2</sup>, Zaiwen Wen<sup>2</sup>
+We hope that the package is useful for your application. If you have any bug reports or comments, please feel free to email one of the authors:
 
-Emails:
-- `zichenwang25@stu.pku.edu.cn`
-- `wlma@pku.edu.cn`
-- `wenzw@pku.edu.cn`
+- Zichen Wang, zichenwang25 at stu.pku.edu.cn
+- Wanli Ma, wlma at pku.edu.cn
+- Kun Yuan, kunyuan at pku.edu.cn
+- Zaiwen Wen (Corresponding author), wenzw at pku.edu.cn
 
-Affiliations:
-- <sup>1</sup> School of Mathematical Sciences, Peking University
-- <sup>2</sup> Beijing International Center for Mathematical Research, Peking University
+## Reference
+
+[Zichen Wang, Wanli Ma, Zhenyu Ming, Gong Zhang, Kun Yuan, Zaiwen Wen, *M2F: Automated Formalization of Mathematical Literature at Scale*, arXiv:XXXX.XXXXX, 2026.](#citation)
+
+## Citation
+
+```bibtex
+@article{wang2026m2f,
+  title   = {M2F: Automated Formalization of Mathematical Literature at Scale},
+  author  = {Zichen Wang and Wanli Ma and Zhenyu Ming and Gong Zhang and Kun Yuan and Zaiwen Wen},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2026}
+}
+```
 
 ## License
 
