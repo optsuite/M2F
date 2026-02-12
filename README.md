@@ -52,7 +52,7 @@ An end-to-end sample is provided in `example/` based on Section 1 (Affine Sets) 
 
 - **Structured source input (extracted from PDF):** `example/section01.json`
 - **Generated Lean files:**
-- `example/Rockafellar_convex_analysis_section01/section01_part1.lean`, `example/Rockafellar_convex_analysis_section01/section01_part2.lean`, `example/Rockafellar_convex_analysis_section01/section01_part3.lean`, `example/Rockafellar_convex_analysis_section01/section01_part4.lean`
+ `example/Rockafellar_convex_analysis_section01/section01_part1.lean`, `example/Rockafellar_convex_analysis_section01/section01_part2.lean`, `example/Rockafellar_convex_analysis_section01/section01_part3.lean`, `example/Rockafellar_convex_analysis_section01/section01_part4.lean`
 - **Merged entry file:** `example/Rockafellar_convex_analysis_section01/section01.lean`
 - **Reference generated Lean code:** [`optsuite/ReasBook/ReasBook`](https://github.com/optsuite/ReasBook/tree/main/ReasBook)
 
