@@ -109,7 +109,7 @@ We hope that the package is useful for your application. If you have any bug rep
 - Zichen Wang, zichenwang25 at stu.pku.edu.cn
 - Wanli Ma, wlma at pku.edu.cn
 - Kun Yuan, kunyuan at pku.edu.cn
-- Zaiwen Wen (Corresponding author), wenzw at pku.edu.cn
+- Zaiwen Wen, wenzw at pku.edu.cn
 
 ## Reference
 
