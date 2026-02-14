@@ -14,7 +14,7 @@ M2F addresses a central bottleneck in machine-assisted mathematics: moving from 
 | Item | Value |
 |---|---|
 | Long-document corpus scale | **479 pages** |
-| Generated Lean project size | **153,853 LoC** |
+| Generated Lean project size | **153,853 lines of Lean code** |
 | Benchmark | **FATE-H (100 problems)** |
 | Fully automatic setting | **96% PSR** |
 | Light supervision (+31 declaration lemma map) | **97% PSR** |
@@ -45,6 +45,17 @@ M2F addresses a central bottleneck in machine-assisted mathematics: moving from 
 - **Long-document setting:** large mathematical sources translated into executable Lean projects.
 - **Core metrics:** Pass Success Rate (PSR), verifier-call efficiency, and verifier-normalized cost.
 
+## Formalized Sources
+
+### Books
+
+- R. Tyrrell Rockafellar, *Convex Analysis*, Princeton University Press, Princeton, 1970, ISBN 0-691-08069-0.
+- Jiri Lebl, *Introduction to Real Analysis, Volume I*, version 6.2, May 23, 2025.
+
+### Paper
+
+- Yurii Nesterov, "Smooth minimization of non-smooth functions," *Mathematical Programming*, Series A 103, 127-152, 2005, DOI: 10.1007/s10107-004-0552-5.
+
 ## Example Demonstration
 
 An end-to-end sample is provided in `example/` based on Section 1 (Affine Sets) of Rockafellar's convex analysis. The workflow in this example is:
@@ -69,7 +80,7 @@ This example explicitly starts from PDF parsing output (`section01.json`) and th
 | Source domain | Textbook- and paper-level mathematical documents |
 | Extraction/formalization pipeline | `PDF source -> structured JSON -> Lean formalization` |
 | Long-document corpus scale | **479 pages** |
-| Generated Lean project size | **153,853 LoC** |
+| Generated Lean project size | **153,853 lines of Lean code** |
 | Stage 2 on matched statements | **100% PSR** |
 
 ### FATE-H Across Provers (PSR)
