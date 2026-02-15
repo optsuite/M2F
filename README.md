@@ -51,10 +51,12 @@ M2F addresses a central bottleneck in machine-assisted mathematics: moving from 
 
 - R. Tyrrell Rockafellar, *Convex Analysis*, Princeton University Press, Princeton, 1970, ISBN 0-691-08069-0.
 - Jiri Lebl, *Introduction to Real Analysis, Volume I*, version 6.2, May 23, 2025.
+- ...
 
 ### Paper
 
 - Yurii Nesterov, "Smooth minimization of non-smooth functions," *Mathematical Programming*, Series A 103, 127-152, 2005, DOI: 10.1007/s10107-004-0552-5.
+- ...
 
 ## Example Demonstration
 
