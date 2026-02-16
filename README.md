@@ -45,6 +45,10 @@ M2F addresses a central bottleneck in machine-assisted mathematics: moving from 
 - **Long-document setting:** large mathematical sources translated into executable Lean projects.
 - **Core metrics:** Pass Success Rate (PSR), verifier-call efficiency, and verifier-normalized cost.
 
+## Involvement of Human Experts:
+- Checking whether the natural-language theorems extracted from the LaTeX source align with the original text.
+- Verifying that the formalized statements correctly match their natural-language counterparts.
+
 ## [Formalized Sources: ReasBook](https://github.com/optsuite/ReasBook) 
 
 ### Books
