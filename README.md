@@ -13,7 +13,7 @@ M2F addresses a central bottleneck in machine-assisted mathematics: moving from 
 
 | Item | Value |
 |---|---|
-| Long-document corpus scale | **479 pages** |
+| Long-document corpus scale: real analysis, convex analysis | **479 pages** |
 | Generated Lean project size | **153,853 lines of Lean code** |
 | Benchmark | **FATE-H (100 problems)** |
 | Fully automatic setting | **96% PSR** |
