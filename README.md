@@ -49,7 +49,7 @@ M2F addresses a central bottleneck in machine-assisted mathematics: moving from 
 - Checking whether the natural-language theorems extracted from the LaTeX source align with the original text.
 - Verifying that the formalized statements correctly match their natural-language counterparts.
 
-## [Formalized Sources: ReasBook](https://github.com/optsuite/ReasBook) 
+## [Formalized Sources: ReasBook](https://github.com/optpku/ReasBook) 
 
 ### Books
 
