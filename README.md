@@ -131,7 +131,7 @@ We hope that the package is useful for your application. If you have any bug rep
 
 ## Reference
 
-[Zichen Wang, Wanli Ma, Zhenyu Ming, Gong Zhang, Kun Yuan, Zaiwen Wen, *M2F: Automated Formalization of Mathematical Literature at Scale*, arXiv:2602.17016, 2026.](#citation)
+[Zichen Wang, Wanli Ma, Zhenyu Ming, Gong Zhang, Kun Yuan, Zaiwen Wen, *M2F: Automated Formalization of Mathematical Literature at Scale*, arXiv:2602.17016, 2026.](https://arxiv.org/abs/2602.17016)
 
 ## Citation
 
