@@ -9,6 +9,8 @@ M2F (Math-to-Formal) is a framework for translating textbook- and paper-level ma
 
 M2F addresses a central bottleneck in machine-assisted mathematics: moving from isolated theorem proving to document-level formalization. The framework separates the workflow into two stages. Stage 1 compiles informal statements into Lean declaration skeletons and repairs structural inconsistencies. Stage 2 freezes statement signatures and focuses on proof completion through verifier-guided repair. This staged design improves stability, interpretability, and end-to-end pass rates.
 
+- Try our public available automated formalization system [Quokka (https://quokka.reaslab.io/)](https://quokka.reaslab.io/).  Quokka can transform long mathematical literature into compilable Lean 4 formal proofs automatically.
+
 ## At a Glance
 
 | Item | Value |
