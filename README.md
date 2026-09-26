@@ -1,6 +1,6 @@
 # M2F: Automated Formalization of Mathematical Literature at Scale
 
-M2F (Math-to-Formal) is a framework for translating textbook- and paper-level mathematics into Lean projects that pass machine verification at scale.
+M2F (Math-to-Formal) is an algorithmic framework for translating textbook- and paper-level mathematics into Lean projects that pass machine verification at scale. [Quokka](https://quokka.reaslab.io/) is the engineering implementation of M2F, offered as a public online service.
 
 ![M2F Overview](figs/M2F_pipeline.png)
 *Figure 1. High-level overview of M2F and its staged formalization process.*
@@ -9,7 +9,13 @@ M2F (Math-to-Formal) is a framework for translating textbook- and paper-level ma
 
 M2F addresses a central bottleneck in machine-assisted mathematics: the transition from isolated theorem proving to document-level formalization. The framework decomposes this process into two stages. In Stage 1, informal mathematical statements are translated into Lean declaration skeletons, while structural inconsistencies are detected and repaired. In Stage 2, the statement signatures are fixed, allowing the system to focus on proof completion through iterative, verifier-guided repair. This staged design enhances robustness and interpretability while substantially improving end-to-end compilation and verification rates.
 
-Try [Quokka (https://quokka.reaslab.io/)](https://quokka.reaslab.io), our publicly available automated formalization system. Quokka can automatically transform long-form mathematical literature into compilable Lean 4 projects containing formally verified statements and proofs.
+## M2F and Quokka
+
+**M2F is the algorithm and research method; Quokka is its engineering implementation and public online service.** M2F defines the staged formalization process described in the [paper](https://arxiv.org/abs/2602.17016). Quokka makes this method available through a web interface on ReasLab for turning mathematical literature into Lean 4 projects. Quokka's source code will be released as open source in a future release.
+
+- Read this page and the paper to understand the M2F algorithm, experiments, and examples.
+- [Use Quokka](https://quokka.reaslab.io/) to access the public service built on M2F.
+- Browse [ReasBook](https://github.com/optpku/ReasBook) for formalized books and papers.
 
 ## At a Glance
 
