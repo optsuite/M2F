@@ -11,11 +11,12 @@ M2F addresses a central bottleneck in machine-assisted mathematics: the transiti
 
 ## M2F and Quokka
 
-**M2F is the algorithm and research method; Quokka is its engineering implementation and public online service.** M2F defines the staged formalization process described in the [paper](https://arxiv.org/abs/2602.17016). Quokka makes this method available through a web interface on ReasLab for turning mathematical literature into Lean 4 projects. Quokka's source code will be released as open source in a future release.
+| Project | Role | Access |
+| --- | --- | --- |
+| M2F | Algorithm and research method for formalizing mathematical literature | [Paper](https://arxiv.org/abs/2602.17016) · [Project and examples](https://github.com/optsuite/M2F) |
+| Quokka | Engineering implementation of M2F and its public online service | [Use on ReasLab](https://quokka.reaslab.io/); source code will be open-sourced later |
 
-- Read this page and the paper to understand the M2F algorithm, experiments, and examples.
-- [Use Quokka](https://quokka.reaslab.io/) to access the public service built on M2F.
-- Browse [ReasBook](https://github.com/optpku/ReasBook) for formalized books and papers.
+Browse [ReasBook](https://github.com/optpku/ReasBook) for formalized books and papers.
 
 ## At a Glance
 
